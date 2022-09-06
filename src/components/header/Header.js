@@ -1,27 +1,31 @@
 import React from "react";
 import "./Header.css"
-import { Link, Outlet } from "react-router-dom";
+
 
 
 export class Header extends React.Component {
-
-
   render() {
+    let categories = [{ name: 'Home' }, { name: 'Stocks And Investing' }, { name: 'About' }]
     return (
-      <div className="bg-dark text-light">
-        <div className="d-flex p-2 text-light">
-          <p className="m-0">Caleb Elliott</p>
-          <nav
-            style={{
-              borderBottom: "solid 1px",
-              paddingBottom: "1rem",
-            }}
-          >
-            <Link to="/invoices">Invoices</Link> |{" "}
-            <Link to="/expenses">Expenses</Link>
-          </nav>
+      <div className="">
+        <div className="banner-img d-flex align-items-center justify-content-end">
+          <img src="https://i0.wp.com/moneywithcaleb.com/wp-content/uploads/2021/11/logo-2.png?w=493&ssl=1" className="logo-img"></img>
         </div>
-        <Outlet></Outlet>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="d-flex p-1">
+                {categories.map((c) => {
+                  return (
+                    <div>
+                      <p className="category-text pe-4">{c.name}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
