@@ -1,9 +1,13 @@
 import React from 'react'
+import { fakeDb } from "../components/blog-post/BlogPost"
 
 export default function About() {
+  let db = fakeDb()
   return (
     <div>
-      <p>This is the about page</p>
+      <p>{db[0].name}</p>
+
+      {db[0].content}
     </div>
   )
 }
