@@ -5,3 +5,12 @@ export default function Expenses() {
     </main>
   );
 }
+
+
+// export class Expenses extends React.Component {
+//   render() {
+//     return (
+//       <h1>Expenses</h1>
+//     )
+//   }
+// }
