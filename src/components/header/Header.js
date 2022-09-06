@@ -21,7 +21,7 @@ export class Header extends React.Component {
                   {categories.map((c) => {
                     return (
                       <div>
-                        <Link to={c.route} className="category-text pe-5 text-dark">{c.name}</Link>
+                        <Link key={c.route} to={c.route} className="category-text pe-5 text-dark">{c.name}</Link>
                       </div>
                     )
                   })}
