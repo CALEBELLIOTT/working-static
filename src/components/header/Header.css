@@ -16,4 +16,16 @@
 
 .category-text {
   font-size: 1.2rem;
+  transition: 300ms;
+  text-decoration: none;
+}
+
+.nav-background {
+  background-color: #f5f3f5;
+}
+
+.category-text:hover {
+  cursor: pointer;
+  color: #005e34;
+  transition: 300ms;
 }

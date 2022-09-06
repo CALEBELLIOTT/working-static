@@ -1,24 +1,25 @@
 import React from "react";
 import "./Header.css"
+import { Link } from "react-router-dom";
 
 
 
 export class Header extends React.Component {
   render() {
-    let categories = [{ name: 'Home' }, { name: 'Stocks And Investing' }, { name: 'About' }]
+    let categories = [{ name: 'Home', route: '/' }, { name: 'Stocks And Investing', route: '/stocks-investing' }, { name: 'About', route: '/about' }]
     return (
       <div className="">
         <div className="banner-img d-flex align-items-center justify-content-end">
           <img src="https://i0.wp.com/moneywithcaleb.com/wp-content/uploads/2021/11/logo-2.png?w=493&ssl=1" className="logo-img"></img>
         </div>
-        <div className="container">
-          <div className="row">
+        <div className="container-fluid">
+          <div className="row nav-background">
             <div className="col-12">
-              <div className="d-flex p-1">
+              <div className="d-flex p-2">
                 {categories.map((c) => {
                   return (
                     <div>
-                      <p className="category-text pe-4">{c.name}</p>
+                      <Link to={c.route} className="category-text pe-4 text-dark">{c.name}</Link>
                     </div>
                   )
                 })}
