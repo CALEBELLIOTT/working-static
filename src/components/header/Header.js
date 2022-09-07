@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 
 export class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { posts: props.posts }
+  }
+
+  componentDidMount() {
+    console.log(this.state)
+  }
   render() {
     let categories = [{ name: 'Home', route: '/' }, { name: 'Stocks And Investing', route: '/stocks-investing' }, { name: 'About', route: '/about' }]
     return (
@@ -21,12 +29,23 @@ export class Header extends React.Component {
                   {categories.map((c) => {
                     return (
                       <div>
-                        <Link key={c.route} to={c.route} className="category-text pe-5 text-dark">{c.name}</Link>
+                        <Link to={c.route} className="category-text pe-5 text-dark">{c.name}</Link>
                       </div>
                     )
                   })}
                 </div>
               </div>
+            </div>
+            <div className="col-12">
+              {this.props.posts.map((p) => {
+                return (
+                  <div>
+                    <p>
+                      {p.name}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

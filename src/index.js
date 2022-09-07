@@ -6,6 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StocksInvesting from "./routes/StocksInvesting";
 import { About } from "./routes/About";
+import { BlogPost } from "./routes/BlogPost";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Route path="About" element={<About />} />
         <Route path="Home" element={<App />} />
         <Route path='Stocks-investing' element={<StocksInvesting />} />
+        <Route path='Blog-post' element={<BlogPost></BlogPost>} />
       </Route>
     </Routes>
   </BrowserRouter>
