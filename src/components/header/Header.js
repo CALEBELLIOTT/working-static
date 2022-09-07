@@ -14,7 +14,7 @@ export class Header extends React.Component {
     console.log(this.state)
   }
   render() {
-    let categories = [{ name: 'Home', route: '/' }, { name: 'Stocks And Investing', route: '/stocks-investing' }, { name: 'About', route: '/about' }]
+    let categories = [{ name: 'Home', route: '/home' }, { name: 'Stocks And Investing', route: '/stocks-investing' }, { name: 'About', route: '/about' }]
     return (
       <div className="">
         {/* <div className="banner-img d-flex align-items-center justify-content-end">

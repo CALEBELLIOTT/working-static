@@ -35,9 +35,11 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    // const res = await api.get('')
-    // this.state.posts = res.data
-    // console.log(this.state.posts);
+    const res = await api.get('')
+    this.setState({
+      posts: res.data
+    })
+    console.log(this.state.posts);
   }
 
   render() {

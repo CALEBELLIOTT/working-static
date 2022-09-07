@@ -7,16 +7,17 @@ import reportWebVitals from './reportWebVitals';
 import StocksInvesting from "./routes/StocksInvesting";
 import { About } from "./routes/About";
 import { BlogPost } from "./routes/BlogPost";
+import Home from "./routes/Home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} >
-        <Route path="About" element={<About />} />
-        <Route path="Home" element={<App />} />
-        <Route path='Stocks-investing' element={<StocksInvesting />} />
-        <Route path='Blog-post' element={<BlogPost></BlogPost>} />
+        <Route path="about" element={<About />} />
+        <Route path="/home" element={<Home></Home>} />
+        <Route path='stocks-investing' element={<StocksInvesting />} />
+        <Route path='blog-post' element={<BlogPost></BlogPost>} />
       </Route>
     </Routes>
   </BrowserRouter>
